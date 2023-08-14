@@ -15,7 +15,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.PAT }}
-      - uses: ./
       - run: docker pull ghcr.io/austenstone/action-docker:sha-c2a395aeaa432ad387a23374c8c3da3f083161de
         if: always()
+      - uses: ./
 
