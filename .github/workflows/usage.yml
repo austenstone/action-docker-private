@@ -17,5 +17,7 @@ jobs:
           password: ${{ secrets.PAT }}
       - run: docker pull ghcr.io/austenstone/action-docker:sha-c2a395aeaa432ad387a23374c8c3da3f083161de
         if: always()
-      - uses: ./
+      - uses: austenstone/action-docker-private@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
